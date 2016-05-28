@@ -1,0 +1,34 @@
+[user]
+  name = Sandeep Raju Prabhakar
+  email = me@sandeepraju.in
+
+[credential]
+  helper = cache --timeout=3600
+
+[core]
+  editor = mg
+  autocrlf = input
+  safecrlf = true
+
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+
+[color]
+  diff = auto
+  branch = auto
+  status = auto
+  interactive = auto
+  ui = true
+  pager = true
+
+[apply]
+  whitespace = fix
+
+[branch]
+  autosetuprebase = always
