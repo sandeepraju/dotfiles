@@ -1,0 +1,10 @@
+Host *
+  IdentityFile ~/.ssh/id_rsa
+  ServerAliveInterval 60
+  VisualHostKey yes
+  LogLevel DEBUG
+
+# Hostname sandeepraju.in
+# Port 22
+# User sandeep
+# ForwardAgent yes
