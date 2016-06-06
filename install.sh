@@ -14,3 +14,7 @@ cp terminator/config ~/.config/terminator/
 echo "installing git config file"
 cp git/config ~/.gitconfig
 cp git/ignore  ~/.gitignore
+
+# Install PyPI config
+echo "installing PyPI config file"
+cp python/pypirc ~/.pypirc
