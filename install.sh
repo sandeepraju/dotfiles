@@ -13,3 +13,4 @@ cp terminator/config ~/.config/terminator/
 # Install git config
 echo "installing git config file"
 cp git/config ~/.gitconfig
+cp git/ignore  ~/.gitignore
