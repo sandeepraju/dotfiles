@@ -18,3 +18,7 @@ cp git/ignore  ~/.gitignore
 # Install PyPI config
 echo "installing PyPI config file"
 cp python/pypirc ~/.pypirc
+
+# Install Postgres PSQL config
+echo "installing psql config file"
+cp postgres/psqlrc  ~/.psqlrc
