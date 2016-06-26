@@ -1,0 +1,82 @@
+source ~/.antigen/antigen.zsh
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle heroku
+antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+antigen bundle rupa/z
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# For SSH, starting ssh-agent is annoying
+# antigen bundle ssh-agent
+
+# Node Plugins
+antigen bundle node
+antigen bundle npm
+
+# Python Plugins
+antigen bundle pip
+antigen bundle python
+antigen bundle virtualenv
+
+# Load the theme.
+antigen theme robbyrussell
+
+# Tell antigen that you're done.
+antigen apply
+
+# Add binaries installed on local
+export PATH=/usr/local/bin:$PATH
+
+# Homebrew Github auto token
+export HOMEBREW_GITHUB_API_TOKEN="add-your-github-token-here"
+
+# Homebrew default editor of choice
+export HOMEBREW_EDITOR="emacs"
+
+# Virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/code
+source /usr/local/bin/virtualenvwrapper.sh
+
+# Go config
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOROOT/bin
+export GOPATH=$HOME/code
+export PATH=$PATH:$GOPATH/bin
+
+# Add postgres to path
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.5/bin
+
+# Aliases
+alias starte="emacs --daemon";
+alias e="emacsclient -c -t -a mg";
+alias stope="emacsclient -e \"(kill-emacs)\"";
+alias pysmtp="sudo python -m smtpd -c DebuggingServer -n localhost:25"
+
+# Custom functions
+function mkcd {
+	mkdir -p $1 && cd $1;
+}
+
+# Configure the editor
+export EDITOR=mg
+
+# Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# This loads nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# Adds android tools path
+export PATH="$PATH:$HOME/Library/Android/sdk/tools"
+export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
+

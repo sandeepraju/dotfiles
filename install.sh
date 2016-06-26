@@ -22,3 +22,6 @@ cp python/pypirc ~/.pypirc
 # Install Postgres PSQL config
 echo "installing psql config file"
 cp postgres/psqlrc  ~/.psqlrc
+
+# Install zsh config
+cp zsh/osx/zshrc ~/.zshrc
