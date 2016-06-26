@@ -35,3 +35,7 @@ cp emacs/init.el ~/.emacs.d/init.el
 # Install mg config
 echo "installing mg config file"
 cp mg/mg ~/.mg
+
+# Install vagrant file
+echo "setting up vagrant"
+cp vagrant/Vagrantfile ~/Vagrantfile
