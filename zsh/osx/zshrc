@@ -56,10 +56,36 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.5/bin
 
 # Aliases
+
+# Makes using emacs easier
 alias starte="emacs --daemon";
 alias e="emacsclient -c -t -a mg";
 alias stope="emacsclient -e \"(kill-emacs)\"";
+
+# Run a local smtp server for debugging
 alias pysmtp="sudo python -m smtpd -c DebuggingServer -n localhost:25"
+
+# List only directories
+alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+
+# Timer
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+# View HTTP traffic
+alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+
+# Trim new lines and copy to clipboard
+alias c="tr -d '\n' | pbcopy"
+
+# Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
 
 # Custom functions
 function mkcd {
