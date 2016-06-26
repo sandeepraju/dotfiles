@@ -31,3 +31,7 @@ cp zsh/osx/zshrc ~/.zshrc
 echo "installing emacs config file"
 mkdir -p ~/.emacs.d/
 cp emacs/init.el ~/.emacs.d/init.el
+
+# Install mg config
+echo "installing mg config file"
+cp mg/mg ~/.mg
