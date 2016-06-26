@@ -24,4 +24,10 @@ echo "installing psql config file"
 cp postgres/psqlrc  ~/.psqlrc
 
 # Install zsh config
+echo "installing zsh config file"
 cp zsh/osx/zshrc ~/.zshrc
+
+# Install emacs config
+echo "installing emacs config file"
+mkdir -p ~/.emacs.d/
+cp emacs/init.el ~/.emacs.d/init.el
