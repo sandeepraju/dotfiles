@@ -92,6 +92,18 @@ function mkcd {
 	mkdir -p $1 && cd $1;
 }
 
+function mkcdtemp {
+  cd $(mktemp -d);
+}
+
+function en() {
+    mkdir -p $HOME/.vault/ && gpg-zip -c -o $HOME/.vault/$1.gpg ./$1 && rm -rf ./$1
+}
+
+function de() {
+    dir=`mktemp -d` && cd $dir && gpg-zip -d $HOME/.vault/$1.gpg
+}
+
 # Configure the editor
 export EDITOR=mg
 
@@ -105,4 +117,3 @@ export NVM_DIR="$HOME/.nvm"
 # Adds android tools path
 export PATH="$PATH:$HOME/Library/Android/sdk/tools"
 export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
-
