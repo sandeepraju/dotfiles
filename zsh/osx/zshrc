@@ -97,7 +97,7 @@ function mkcdtemp {
 }
 
 function en() {
-    mkdir -p $HOME/.vault/ && gpg-zip -c -o $HOME/.vault/$1.gpg ./$1 && rm -rf ./$1
+    mkdir -p $HOME/.vault/ && gpg-zip -c -o $HOME/.vault/$1.gpg ./$1 && srm -rf ./$1
 }
 
 function de() {
@@ -105,7 +105,7 @@ function de() {
 }
 
 function enf() {
-    mkdir -p $HOME/.vault/ && gpg -c -o $HOME/.vault/$1.gpg ./$1 && rm -rf ./$1
+    mkdir -p $HOME/.vault/ && gpg -c -o $HOME/.vault/$1.gpg ./$1 && srm -rf ./$1
 }
 
 function def() {
