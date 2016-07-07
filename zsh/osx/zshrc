@@ -104,6 +104,14 @@ function de() {
     dir=`mktemp -d` && cd $dir && gpg-zip -d $HOME/.vault/$1.gpg
 }
 
+function enf() {
+    mkdir -p $HOME/.vault/ && gpg -c -o $HOME/.vault/$1.gpg ./$1 && rm -rf ./$1
+}
+
+function def() {
+    dir=`mktemp -d` && cd $dir && gpg -o ./$1 -d $HOME/.vault/$1.gpg
+}
+
 # Configure the editor
 export EDITOR=mg
 
