@@ -151,6 +151,9 @@ Return a list of installed packages or nil for every skipped package."
 (setq initial-scratch-message "")
 (setq inhibit-startup-message t)
 
+;; Set startup *scratch* buffer mode to text.
+(setq initial-major-mode 'text-mode)
+
 ;; Enable soft wrapping.
 (visual-line-mode t)
 
