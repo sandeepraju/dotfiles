@@ -86,6 +86,11 @@ alias c="tr -d '\n' | pbcopy"
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
+# PyPI aliases
+alias pypi-register-test="python setup.py register -r pypitest"
+alias pypi-register-live="python setup.py register -r pypi"
+alias pypi-upload-test="python setup.py sdist upload -r pypitest"
+alias pypi-upload-live="python setup.py sdist upload -r pypi"
 
 # Custom functions
 function mkcd {
