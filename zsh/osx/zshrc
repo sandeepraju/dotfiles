@@ -126,7 +126,3 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # This loads nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
-# Adds android tools path
-export PATH="$PATH:$HOME/Library/Android/sdk/tools"
-export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
