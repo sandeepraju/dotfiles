@@ -52,9 +52,6 @@ export PATH=$PATH:$GOROOT/bin
 export GOPATH=$HOME/code
 export PATH=$PATH:$GOPATH/bin
 
-# Add postgres to path
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.5/bin
-
 # Aliases
 
 # Makes using emacs easier
@@ -115,6 +112,14 @@ function enf() {
 
 function def() {
     dir=`mktemp -d` && cd $dir && gpg -o ./$1 -d $HOME/.vault/$1.gpg
+}
+
+function focus {
+  secs=$(($1 * 60))
+  while [ true ]; do
+    afplay /System/Library/Sounds/Ping.aiff
+    sleep $secs
+  done
 }
 
 # Configure the editor
